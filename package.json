@@ -1,0 +1,43 @@
+{
+  "name": "weather-analytics-dashboard",
+  "version": "1.0.0",
+  "description": "Weather analytics and forecasting dashboard with Vue.js, D3.js, Chart.js, Leaflet, Flask, and Python",
+  "main": "index.js",
+  "scripts": {
+    "install-backend": "cd backend && pip install -r requirements.txt",
+    "install-frontend": "cd frontend && npm install",
+    "install-all": "npm run install-backend && npm run install-frontend",
+    "dev-backend": "cd backend && python app.py",
+    "dev-frontend": "cd frontend && npm run dev",
+    "dev": "concurrently \"npm run dev-backend\" \"npm run dev-frontend\"",
+    "build": "cd frontend && npm run build",
+    "start": "npm run dev",
+    "setup": "npm run install-all && echo 'Setup complete! Configure your .env file with API keys.'"
+  },
+  "keywords": [
+    "weather",
+    "dashboard",
+    "analytics",
+    "vue.js",
+    "d3.js",
+    "chart.js",
+    "leaflet",
+    "flask",
+    "python",
+    "forecasting",
+    "visualization"
+  ],
+  "author": "Weather Dashboard Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/weather-analytics-dashboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/weather-analytics-dashboard/issues"
+  },
+  "homepage": "https://github.com/yourusername/weather-analytics-dashboard#readme"
+}
