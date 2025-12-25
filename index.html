@@ -1,91 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather Analytics Dashboard — Demo Mode</title>
-    <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-row">
-        <div>
-          <div class="kicker">DEMO MODE (static showcase)</div>
-          <h1>Weather Analytics Dashboard</h1>
-          <p class="subtitle">Mocked weather data and charts. No API keys, no backend.</p>
-        </div>
-        <div class="header-actions">
-          <a class="btn" href="https://github.com/krispykeenz/Weather_Dashboard" target="_blank" rel="noopener">View repo</a>
-        </div>
-      </div>
-    </header>
-
-    <main class="container">
-      <section class="card">
-        <div class="row">
-          <div>
-            <h2 class="m0">Demo dashboard</h2>
-            <p class="muted">Select a city to preview mocked analytics and a 7‑day temperature trend.</p>
-          </div>
-          <label class="field">
-            <span class="label">City</span>
-            <select id="citySelect"></select>
-          </label>
-        </div>
-
-        <div class="grid-2" style="grid-template-columns: 1fr 1fr; margin: 1rem 0 0;">
-          <div class="card" style="box-shadow:none;">
-            <h2>Current conditions</h2>
-            <div class="row">
-              <div>
-                <div class="muted">Temperature</div>
-                <div class="total" id="tempNow">—</div>
-              </div>
-              <div class="pill" id="conditionPill">—</div>
-            </div>
-            <div class="divider"></div>
-            <div class="row">
-              <div>
-                <div class="muted">Humidity</div>
-                <div id="humidityNow">—</div>
-              </div>
-              <div>
-                <div class="muted">Wind</div>
-                <div id="windNow">—</div>
-              </div>
-              <div>
-                <div class="muted">Pressure</div>
-                <div id="pressureNow">—</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card" style="box-shadow:none;">
-            <h2>7‑day temperature trend</h2>
-            <canvas id="trendChart" width="800" height="360" style="width:100%; height:auto;"></canvas>
-            <p class="muted small">Chart is drawn with a tiny custom canvas renderer (no libraries).</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="card" style="margin-top: 1rem;">
-        <h2>Demo notes</h2>
-        <ul class="bullets">
-          <li>Real project uses Vue + Flask and calls OpenWeatherMap via the backend.</li>
-          <li>This demo intentionally avoids API keys and external requests.</li>
-        </ul>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <span class="muted">Weather Analytics Dashboard — Demo Mode</span>
-        <span class="muted">Static portfolio build</span>
-      </div>
-    </footer>
-
-    <!-- DEMO MODE ONLY: safe, static showcase. Remove the /demo folder when publishing a real deployment. -->
-    <script src="./app.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Analytics Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="./assets/index-3a261b02.js"></script>
+  <link rel="stylesheet" href="./assets/index-e8e2d2fd.css">
+</head>
+<body>
+    <div id="app"></div>
+    
+</body>
 </html>
