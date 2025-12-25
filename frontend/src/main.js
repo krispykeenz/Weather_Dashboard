@@ -1,10 +1,12 @@
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
 import App from './App.vue'
 import Dashboard from './views/Dashboard.vue'
 import Analytics from './views/Analytics.vue'
 import Maps from './views/Maps.vue'
 import './style.css'
+
+const isDemoMode = import.meta.env.VITE_DEMO_MODE === 'true'
 
 const routes = [
   { path: '/', redirect: '/dashboard' },
@@ -14,7 +16,8 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  // GitHub Pages is static hosting; hash routing prevents 404s on deep links.
+  history: isDemoMode ? createWebHashHistory() : createWebHistory(),
   routes
 })
 
